@@ -1,0 +1,196 @@
+:root {
+    /* general colors */
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+
+    /* Inputs colors  */
+    --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --Red: hsl(0, 100%, 66%);
+    /* fonts  */
+    --Font-size: 18px;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0%;
+}
+
+.container {
+    width: calc(90%, -4%);
+    height: 100vh;
+    background-image: url('images/bg-main-mobile.png');
+    background-position: contain;
+    background-repeat: repeat-x;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--Font-size);
+    font-weight: 500;
+
+
+}
+
+::placeholder {
+    color: var(--Light-grayish-violet);
+}
+/* inout apparences */
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+
+.container-card {
+    color: var(--White);
+    width: 80%;
+}
+
+.card-face {
+    transform: translate(1rem, 8rem);
+    position: relative;
+    z-index: 1;
+
+}
+
+.card-img-overlay {
+    position: relative;
+    z-index: 10;
+
+
+}
+
+.card-img-overlay img {
+    width: 3rem;
+    display: block;
+    position: absolute;
+    left: 2rem;
+    top: -2rem;
+}
+
+.title-1 {
+    position: absolute;
+    top: 2.5rem;
+    left: 3.5rem;
+    font-size: var(--Font-size);
+    letter-spacing: 3.5px;
+}
+
+.title-2 {
+    position: absolute;
+    top: 5rem;
+    left: 3.5rem;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+}
+
+
+.title-3 {
+    position: absolute;
+    top: 5rem;
+    left: 15rem;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+}
+
+.title-4 {
+    position: absolute;
+    top: 6rem;
+    left: 19rem;
+
+}
+
+.card-reverse {
+
+    transform: translate(3.3rem, -10rem);
+
+}
+
+.card-face img,
+.card-reverse img {
+    width: 20rem;
+}
+
+
+/* form styles*/
+
+.form-main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    position: absolute;
+}
+
+.form-main label {
+    font-size: .8rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+    letter-spacing: .2rem;
+
+
+}
+
+.form-main input {
+    width: 20rem;
+    height: 3rem;
+    border: solid 1px var(--Light-grayish-violet);
+    border-radius: .4rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.group-container {
+    display: flex;
+}
+
+.date-group label {
+    display: inline-block;
+}
+
+.date-group input {
+    display: inline-block;
+    width: 5rem;
+}
+
+
+.cvc-container label {
+    display: block;
+}
+
+#cvc {
+    display: inline-block;
+    width: 9rem;
+}
+
+/* STYLES INPUTS SELECT */
+
+input:focus {
+    border-color: var(--Linear-gradient);
+}
+
+.btn-confirm {
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    height: 3rem;
+    border-radius: .4rem;
+    border: none;
+    margin: 1rem 0;
+}
+
+/* error message */
+
+.error h2 {
+    color: var(--Red);
+    font-size: .8rem;
+}
+
+
